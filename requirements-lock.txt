@@ -1,0 +1,10 @@
+pandas==3.0.3
+numpy==2.4.6
+scikit-learn==1.8.0
+scipy==1.17.1
+z3-solver==4.16.0.0
+joblib==1.5.3
+threadpoolctl==3.6.0
+python-dateutil==2.9.0.post0
+six==1.17.0
+tzdata==2026.2

@@ -1,0 +1,41 @@
+[run]
+name = "cicids2017_full_candidate"
+seed = 42
+output_root = "outputs/runs"
+max_rows = 50000
+max_alerts = 0
+enricher = "mock"
+
+[data]
+csv_paths = [
+  "data/raw/cicids2017/Monday-WorkingHours.pcap_ISCX.csv",
+  "data/raw/cicids2017/Tuesday-WorkingHours.pcap_ISCX.csv",
+  "data/raw/cicids2017/Wednesday-workingHours.pcap_ISCX.csv",
+  "data/raw/cicids2017/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+  "data/raw/cicids2017/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+  "data/raw/cicids2017/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+  "data/raw/cicids2017/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+  "data/raw/cicids2017/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+]
+synthetic_rows = 2000
+
+[baseline]
+task = "multiclass"
+model = "random_forest"
+n_estimators = 100
+test_size = 0.30
+validation_size = 0.20
+class_weight = "balanced"
+alert_threshold = 0.15
+
+[llm]
+model = "gpt-5.4-mini"
+temperature = 0
+top_p = 1
+max_output_tokens = 500
+timeout_seconds = 180
+
+[validation]
+latency_target_seconds = 1.0
+false_positive_reduction_target = 0.30
+recall_margin = 0.05

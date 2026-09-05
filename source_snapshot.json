@@ -1,0 +1,16 @@
+{
+  "files": {
+    ".gitignore": "08fab511c22aa6b28a89dd879684d78600f9a24ea50b965b9cc8d9249ef430a5",
+    "README.md": "3e8954581394e8d110055720536135763bf2e03caffafda3496701e569cdd3a3",
+    "requirements-lock.txt": "b0b2b738c2cbf3f525eb77dcc327467394e7e7c0b8498b5678fc5af5c959b6d5",
+    "config/cicids2017_full_candidate.toml": "c9a4e143dbbca2335156df788bf6aa455c98e3acce783a801a11473cc738ddc0",
+    "docs/remediation_protocol_20260905.md": "a329868d4d787315f1a26665e972c9cce3c3e38000c2500b29164e01af243113",
+    "scripts/run_corrective_evaluation.py": "43cf3268aabf408f0208fe136fe529c686104d8300b493bab514c203bacfd2ea",
+    "scripts/run_experiment.py": "5df2f6d28d723203269d3de5a133980251650cfdf44472d9b67ffa492fd37582",
+    "src/soc_validation_experiment/corrective_evaluation.py": "37d66f74797368a8eb2a563edae96f18f0a5658880778c63c1ddedc74b431ab7",
+    "src/soc_validation_experiment/pipeline.py": "f15d5d877292f1168a19f59148b7908b32fa5994992ac8a1901216b1fe37c269",
+    "src/soc_validation_experiment/__init__.py": "131cab4e121ba6823e85058c2034e616cf5c64297fe1943ff2d350c9d3fdde73",
+    "tests/test_corrective_evaluation.py": "d577f447ba1ac8b3ea35fbbaeaa42625620b64d44180605c4c798a0414fc92fd"
+  },
+  "public_scope": "Allowlisted research source and protocol only; no private history or row-level data."
+}
