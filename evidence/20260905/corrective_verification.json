@@ -1,0 +1,74 @@
+{
+  "checked_at_utc": "2026-09-05T06:15:44.734968+00:00",
+  "status": "passed",
+  "experiment_manifest_sha256": "aa93f95556e93b66bca2e7186eeda149b00101028ee802c6c1e9dedcf4de2a38",
+  "experiment_outputs_hash_checked": 75,
+  "dataset_hashes_checked": 8,
+  "source_hashes_checked": 4,
+  "conditions": [
+    {
+      "condition": "duplicate_group_split",
+      "checks": "passed",
+      "policies_recounted": 5,
+      "test_rows_reconciled": 120059,
+      "training_medians_recomputed": 78,
+      "all_raw_and_transformed_cross_partition_overlaps": 0,
+      "development_only_selection_recomputed": true,
+      "test_smt_disagreements": 0
+    },
+    {
+      "condition": "leave_day_out_Monday",
+      "checks": "passed",
+      "policies_recounted": 5,
+      "test_rows_reconciled": 50000,
+      "training_medians_recomputed": 78,
+      "all_raw_and_transformed_cross_partition_overlaps": 0,
+      "development_only_selection_recomputed": true,
+      "test_smt_disagreements": 0
+    },
+    {
+      "condition": "leave_day_out_Tuesday",
+      "checks": "passed",
+      "policies_recounted": 5,
+      "test_rows_reconciled": 50000,
+      "training_medians_recomputed": 78,
+      "all_raw_and_transformed_cross_partition_overlaps": 0,
+      "development_only_selection_recomputed": true,
+      "test_smt_disagreements": 0
+    },
+    {
+      "condition": "leave_day_out_Wednesday",
+      "checks": "passed",
+      "policies_recounted": 5,
+      "test_rows_reconciled": 50000,
+      "training_medians_recomputed": 78,
+      "all_raw_and_transformed_cross_partition_overlaps": 0,
+      "development_only_selection_recomputed": true,
+      "test_smt_disagreements": 0
+    },
+    {
+      "condition": "leave_day_out_Thursday",
+      "checks": "passed",
+      "policies_recounted": 5,
+      "test_rows_reconciled": 100000,
+      "training_medians_recomputed": 78,
+      "all_raw_and_transformed_cross_partition_overlaps": 0,
+      "development_only_selection_recomputed": true,
+      "test_smt_disagreements": 0
+    },
+    {
+      "condition": "leave_day_out_Friday",
+      "checks": "passed",
+      "policies_recounted": 5,
+      "test_rows_reconciled": 150000,
+      "training_medians_recomputed": 78,
+      "all_raw_and_transformed_cross_partition_overlaps": 0,
+      "development_only_selection_recomputed": true,
+      "test_smt_disagreements": 0
+    }
+  ],
+  "historical_primary_inputs_unchanged": true,
+  "prior_manuscript_unchanged": true,
+  "current_primary_metrics_unchanged": true,
+  "audit_scope": "Independent arithmetic from row-level records, development frontier reselection, raw data training-only medians, partition identity/overlap, actual test SMT records, and provenance hashes. Not a second full model refit or external replication."
+}

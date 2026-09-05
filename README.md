@@ -57,9 +57,59 @@ diagnostic.
 
 ## Evidence and limits
 
-The initial version contains the protocol and tested source. Aggregate outcome
-records will be added after the planned runs finish; an initial source commit
-does not establish successful experimental completion.
+The completed September 5, 2026 corrective run evaluated 400,000 sampled rows
+under six prewritten conditions. The initial source/protocol commit preceded
+the run. [Aggregate evidence](evidence/20260905/results.json),
+[independent reconciliation](evidence/20260905/corrective_verification.json),
+and an [executed audit notebook](notebooks/review_corrective_evidence.ipynb)
+are included. The notebook uses only standard-library computations and public
+aggregates; its execution is not a second full model fit.
+
+The group-separated test set contained 120,059 records, including 23,603
+malicious records. All counts below use the same 0.15 reference queue.
+
+| Policy | False positives removed | True positives removed | Recall change (percentage points) |
+| --- | ---: | ---: | ---: |
+| Symbolic filter | 117 | 795 | -3.368 |
+| Development-selected score filter (0.21) | 110 | 11 | -0.047 |
+| Development-selected detector (0.16) | 17 | 1 | -0.004 |
+| Selected detector plus symbolic filter | 121 | 796 | -3.372 |
+
+Symbolic false-positive reduction was 31.200%, but its Wilson 95% interval
+was 26.721%-36.060%, crossing the historical 30% target. The score-only filter
+removed seven fewer false positives and 784 fewer true positives: this is not
+strict dominance on both counts, but it exposes the symbolic recall cost.
+Under equal FP/FN count costs the symbolic policy's net benefit is -678.
+Historical criteria are not operational safety tolerances.
+
+Day-held-out baseline/symbolic recalls were: Tuesday 39.072%/19.536%, Wednesday
+24.593%/6.983%, Thursday 84.296%/1.489%, and Friday 31.106%/30.956%. Monday has
+no malicious examples, so recall is undefined. These separately trained models
+face previously unseen attack labels; do not pool their outputs as independent
+replications or describe this as forward-time deployment testing.
+
+The group-split mean serial local enrichment-plus-Z3 latency was 3.552 ms.
+Five warmed 1,000-alert passes had means of 3.079-4.048 ms. The manifest records
+the Intel i7-9750H host, approximately 15.88 GiB RAM, software, source hashes,
+input hashes, and output hashes. This is new timing evidence, not a recovery
+of the unrecorded historical hardware environment.
+
+All six conditions independently reconciled counts, training-only medians,
+development-only selection, and zero raw/transformed exact-feature overlap
+between partitions. The complete raw artifacts remain local. The public
+manifest lists their hashes but a public aggregate check cannot independently
+recount unavailable row-level records; full reproduction regenerates them.
+
+To verify this published package without obtaining the dataset:
+
+```sh
+python scripts/verify_published_evidence.py
+```
+
+The [version 1.0.0 source](https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.0.0)
+is the citation target. Source hashes identify the actual bytes because the
+experiment was executed from a dirty private worktree; the private commit ID
+alone does not identify the evaluated implementation.
 
 Exact-feature separation does not guarantee independence of related traffic.
 Capture days contain different attacks; leave-day-out evaluation is not a

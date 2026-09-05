@@ -1,0 +1,6 @@
+condition,policy,label,test_rows,baseline_retained,policy_retained,removed,absent_from_training,malicious_label
+leave_day_out_Monday,reference_detector,BENIGN,50000,247,247,0,False,False
+leave_day_out_Monday,symbolic,BENIGN,50000,247,94,153,False,False
+leave_day_out_Monday,development_score_filter,BENIGN,50000,247,134,113,False,False
+leave_day_out_Monday,development_detector,BENIGN,50000,247,247,0,False,False
+leave_day_out_Monday,development_detector_plus_symbolic,BENIGN,50000,247,94,153,False,False

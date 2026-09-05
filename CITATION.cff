@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this versioned research software when reproducing the corrective evaluation."
+title: "SOC alert validation reproducibility"
+type: software
+authors:
+  - family-names: "troncook"
+version: 1.0.0
+date-released: 2026-09-05
+repository-code: "https://github.com/troncook/soc-alert-validation-reproducibility"
+url: "https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.0.0"

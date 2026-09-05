@@ -1,0 +1,32 @@
+split,Label,rows
+development,BENIGN,80866
+development,Bot,599
+development,DDoS,8546
+development,DoS GoldenEye,228
+development,DoS Hulk,4501
+development,DoS Slowhttptest,110
+development,DoS slowloris,136
+development,FTP-Patator,247
+development,Heartbleed,2
+development,Infiltration,11
+development,PortScan,8340
+development,SSH-Patator,214
+development,Web Attack � Brute Force,459
+development,Web Attack � Sql Injection,7
+development,Web Attack � XSS,203
+test,BENIGN,50000
+train,BENIGN,188298
+train,Bot,1367
+train,DDoS,19811
+train,DoS GoldenEye,515
+train,DoS Hulk,12175
+train,DoS Slowhttptest,287
+train,DoS slowloris,282
+train,FTP-Patator,643
+train,Heartbleed,9
+train,Infiltration,25
+train,PortScan,19400
+train,SSH-Patator,447
+train,Web Attack � Brute Force,1048
+train,Web Attack � Sql Injection,14
+train,Web Attack � XSS,449

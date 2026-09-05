@@ -1,0 +1,26 @@
+condition,policy,label,test_rows,baseline_retained,policy_retained,removed,absent_from_training,malicious_label
+leave_day_out_Thursday,reference_detector,BENIGN,97784,11011,11011,0,False,False
+leave_day_out_Thursday,reference_detector,Infiltration,36,1,1,0,True,True
+leave_day_out_Thursday,reference_detector,Web Attack � Brute Force,1507,1251,1251,0,True,True
+leave_day_out_Thursday,reference_detector,Web Attack � Sql Injection,21,10,10,0,True,True
+leave_day_out_Thursday,reference_detector,Web Attack � XSS,652,606,606,0,True,True
+leave_day_out_Thursday,symbolic,BENIGN,97784,11011,520,10491,False,False
+leave_day_out_Thursday,symbolic,Infiltration,36,1,1,0,True,True
+leave_day_out_Thursday,symbolic,Web Attack � Brute Force,1507,1251,18,1233,True,True
+leave_day_out_Thursday,symbolic,Web Attack � Sql Injection,21,10,4,6,True,True
+leave_day_out_Thursday,symbolic,Web Attack � XSS,652,606,10,596,True,True
+leave_day_out_Thursday,development_score_filter,BENIGN,97784,11011,6280,4731,False,False
+leave_day_out_Thursday,development_score_filter,Infiltration,36,1,1,0,True,True
+leave_day_out_Thursday,development_score_filter,Web Attack � Brute Force,1507,1251,1142,109,True,True
+leave_day_out_Thursday,development_score_filter,Web Attack � Sql Injection,21,10,4,6,True,True
+leave_day_out_Thursday,development_score_filter,Web Attack � XSS,652,606,570,36,True,True
+leave_day_out_Thursday,development_detector,BENIGN,97784,11011,11011,0,False,False
+leave_day_out_Thursday,development_detector,Infiltration,36,1,1,0,True,True
+leave_day_out_Thursday,development_detector,Web Attack � Brute Force,1507,1251,1251,0,True,True
+leave_day_out_Thursday,development_detector,Web Attack � Sql Injection,21,10,10,0,True,True
+leave_day_out_Thursday,development_detector,Web Attack � XSS,652,606,606,0,True,True
+leave_day_out_Thursday,development_detector_plus_symbolic,BENIGN,97784,11011,520,10491,False,False
+leave_day_out_Thursday,development_detector_plus_symbolic,Infiltration,36,1,1,0,True,True
+leave_day_out_Thursday,development_detector_plus_symbolic,Web Attack � Brute Force,1507,1251,18,1233,True,True
+leave_day_out_Thursday,development_detector_plus_symbolic,Web Attack � Sql Injection,21,10,4,6,True,True
+leave_day_out_Thursday,development_detector_plus_symbolic,Web Attack � XSS,652,606,10,596,True,True

@@ -1,0 +1,16 @@
+condition,policy,label,test_rows,baseline_retained,policy_retained,removed,absent_from_training,malicious_label
+leave_day_out_Tuesday,reference_detector,BENIGN,48449,803,803,0,False,False
+leave_day_out_Tuesday,reference_detector,FTP-Patator,890,287,287,0,True,True
+leave_day_out_Tuesday,reference_detector,SSH-Patator,661,319,319,0,True,True
+leave_day_out_Tuesday,symbolic,BENIGN,48449,803,513,290,False,False
+leave_day_out_Tuesday,symbolic,FTP-Patator,890,287,286,1,True,True
+leave_day_out_Tuesday,symbolic,SSH-Patator,661,319,17,302,True,True
+leave_day_out_Tuesday,development_score_filter,BENIGN,48449,803,514,289,False,False
+leave_day_out_Tuesday,development_score_filter,FTP-Patator,890,287,259,28,True,True
+leave_day_out_Tuesday,development_score_filter,SSH-Patator,661,319,265,54,True,True
+leave_day_out_Tuesday,development_detector,BENIGN,48449,803,803,0,False,False
+leave_day_out_Tuesday,development_detector,FTP-Patator,890,287,287,0,True,True
+leave_day_out_Tuesday,development_detector,SSH-Patator,661,319,319,0,True,True
+leave_day_out_Tuesday,development_detector_plus_symbolic,BENIGN,48449,803,513,290,False,False
+leave_day_out_Tuesday,development_detector_plus_symbolic,FTP-Patator,890,287,286,1,True,True
+leave_day_out_Tuesday,development_detector_plus_symbolic,SSH-Patator,661,319,17,302,True,True

@@ -1,0 +1,76 @@
+condition,policy,label,test_rows,baseline_retained,policy_retained,removed,absent_from_training,malicious_label
+duplicate_group_split,reference_detector,BENIGN,96456,375,375,0,False,False
+duplicate_group_split,reference_detector,Bot,599,573,573,0,False,True
+duplicate_group_split,reference_detector,DDoS,8546,8545,8545,0,False,True
+duplicate_group_split,reference_detector,DoS GoldenEye,228,228,228,0,False,True
+duplicate_group_split,reference_detector,DoS Hulk,4501,4498,4498,0,False,True
+duplicate_group_split,reference_detector,DoS Slowhttptest,110,110,110,0,False,True
+duplicate_group_split,reference_detector,DoS slowloris,136,136,136,0,False,True
+duplicate_group_split,reference_detector,FTP-Patator,247,247,247,0,False,True
+duplicate_group_split,reference_detector,Heartbleed,2,2,2,0,False,True
+duplicate_group_split,reference_detector,Infiltration,11,6,6,0,False,True
+duplicate_group_split,reference_detector,PortScan,8340,8339,8339,0,False,True
+duplicate_group_split,reference_detector,SSH-Patator,214,214,214,0,False,True
+duplicate_group_split,reference_detector,Web Attack � Brute Force,459,459,459,0,False,True
+duplicate_group_split,reference_detector,Web Attack � Sql Injection,7,7,7,0,False,True
+duplicate_group_split,reference_detector,Web Attack � XSS,203,200,200,0,False,True
+duplicate_group_split,symbolic,BENIGN,96456,375,258,117,False,False
+duplicate_group_split,symbolic,Bot,599,573,573,0,False,True
+duplicate_group_split,symbolic,DDoS,8546,8545,8539,6,False,True
+duplicate_group_split,symbolic,DoS GoldenEye,228,228,223,5,False,True
+duplicate_group_split,symbolic,DoS Hulk,4501,4498,4494,4,False,True
+duplicate_group_split,symbolic,DoS Slowhttptest,110,110,105,5,False,True
+duplicate_group_split,symbolic,DoS slowloris,136,136,135,1,False,True
+duplicate_group_split,symbolic,FTP-Patator,247,247,247,0,False,True
+duplicate_group_split,symbolic,Heartbleed,2,2,2,0,False,True
+duplicate_group_split,symbolic,Infiltration,11,6,6,0,False,True
+duplicate_group_split,symbolic,PortScan,8340,8339,8230,109,False,True
+duplicate_group_split,symbolic,SSH-Patator,214,214,211,3,False,True
+duplicate_group_split,symbolic,Web Attack � Brute Force,459,459,0,459,False,True
+duplicate_group_split,symbolic,Web Attack � Sql Injection,7,7,0,7,False,True
+duplicate_group_split,symbolic,Web Attack � XSS,203,200,4,196,False,True
+duplicate_group_split,development_score_filter,BENIGN,96456,375,265,110,False,False
+duplicate_group_split,development_score_filter,Bot,599,573,570,3,False,True
+duplicate_group_split,development_score_filter,DDoS,8546,8545,8545,0,False,True
+duplicate_group_split,development_score_filter,DoS GoldenEye,228,228,228,0,False,True
+duplicate_group_split,development_score_filter,DoS Hulk,4501,4498,4497,1,False,True
+duplicate_group_split,development_score_filter,DoS Slowhttptest,110,110,110,0,False,True
+duplicate_group_split,development_score_filter,DoS slowloris,136,136,136,0,False,True
+duplicate_group_split,development_score_filter,FTP-Patator,247,247,247,0,False,True
+duplicate_group_split,development_score_filter,Heartbleed,2,2,2,0,False,True
+duplicate_group_split,development_score_filter,Infiltration,11,6,5,1,False,True
+duplicate_group_split,development_score_filter,PortScan,8340,8339,8337,2,False,True
+duplicate_group_split,development_score_filter,SSH-Patator,214,214,214,0,False,True
+duplicate_group_split,development_score_filter,Web Attack � Brute Force,459,459,458,1,False,True
+duplicate_group_split,development_score_filter,Web Attack � Sql Injection,7,7,7,0,False,True
+duplicate_group_split,development_score_filter,Web Attack � XSS,203,200,197,3,False,True
+duplicate_group_split,development_detector,BENIGN,96456,375,358,17,False,False
+duplicate_group_split,development_detector,Bot,599,573,573,0,False,True
+duplicate_group_split,development_detector,DDoS,8546,8545,8545,0,False,True
+duplicate_group_split,development_detector,DoS GoldenEye,228,228,228,0,False,True
+duplicate_group_split,development_detector,DoS Hulk,4501,4498,4498,0,False,True
+duplicate_group_split,development_detector,DoS Slowhttptest,110,110,110,0,False,True
+duplicate_group_split,development_detector,DoS slowloris,136,136,136,0,False,True
+duplicate_group_split,development_detector,FTP-Patator,247,247,247,0,False,True
+duplicate_group_split,development_detector,Heartbleed,2,2,2,0,False,True
+duplicate_group_split,development_detector,Infiltration,11,6,5,1,False,True
+duplicate_group_split,development_detector,PortScan,8340,8339,8339,0,False,True
+duplicate_group_split,development_detector,SSH-Patator,214,214,214,0,False,True
+duplicate_group_split,development_detector,Web Attack � Brute Force,459,459,459,0,False,True
+duplicate_group_split,development_detector,Web Attack � Sql Injection,7,7,7,0,False,True
+duplicate_group_split,development_detector,Web Attack � XSS,203,200,200,0,False,True
+duplicate_group_split,development_detector_plus_symbolic,BENIGN,96456,375,254,121,False,False
+duplicate_group_split,development_detector_plus_symbolic,Bot,599,573,573,0,False,True
+duplicate_group_split,development_detector_plus_symbolic,DDoS,8546,8545,8539,6,False,True
+duplicate_group_split,development_detector_plus_symbolic,DoS GoldenEye,228,228,223,5,False,True
+duplicate_group_split,development_detector_plus_symbolic,DoS Hulk,4501,4498,4494,4,False,True
+duplicate_group_split,development_detector_plus_symbolic,DoS Slowhttptest,110,110,105,5,False,True
+duplicate_group_split,development_detector_plus_symbolic,DoS slowloris,136,136,135,1,False,True
+duplicate_group_split,development_detector_plus_symbolic,FTP-Patator,247,247,247,0,False,True
+duplicate_group_split,development_detector_plus_symbolic,Heartbleed,2,2,2,0,False,True
+duplicate_group_split,development_detector_plus_symbolic,Infiltration,11,6,5,1,False,True
+duplicate_group_split,development_detector_plus_symbolic,PortScan,8340,8339,8230,109,False,True
+duplicate_group_split,development_detector_plus_symbolic,SSH-Patator,214,214,211,3,False,True
+duplicate_group_split,development_detector_plus_symbolic,Web Attack � Brute Force,459,459,0,459,False,True
+duplicate_group_split,development_detector_plus_symbolic,Web Attack � Sql Injection,7,7,0,7,False,True
+duplicate_group_split,development_detector_plus_symbolic,Web Attack � XSS,203,200,4,196,False,True

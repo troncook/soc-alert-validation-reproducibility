@@ -1,0 +1,31 @@
+condition,policy,label,test_rows,baseline_retained,policy_retained,removed,absent_from_training,malicious_label
+leave_day_out_Wednesday,reference_detector,BENIGN,31755,60,60,0,False,False
+leave_day_out_Wednesday,reference_detector,DoS GoldenEye,743,321,321,0,True,True
+leave_day_out_Wednesday,reference_detector,DoS Hulk,16676,4048,4048,0,True,True
+leave_day_out_Wednesday,reference_detector,DoS Slowhttptest,397,3,3,0,True,True
+leave_day_out_Wednesday,reference_detector,DoS slowloris,418,115,115,0,True,True
+leave_day_out_Wednesday,reference_detector,Heartbleed,11,0,0,0,True,True
+leave_day_out_Wednesday,symbolic,BENIGN,31755,60,31,29,False,False
+leave_day_out_Wednesday,symbolic,DoS GoldenEye,743,321,13,308,True,True
+leave_day_out_Wednesday,symbolic,DoS Hulk,16676,4048,1261,2787,True,True
+leave_day_out_Wednesday,symbolic,DoS Slowhttptest,397,3,0,3,True,True
+leave_day_out_Wednesday,symbolic,DoS slowloris,418,115,0,115,True,True
+leave_day_out_Wednesday,symbolic,Heartbleed,11,0,0,0,True,True
+leave_day_out_Wednesday,development_score_filter,BENIGN,31755,60,19,41,False,False
+leave_day_out_Wednesday,development_score_filter,DoS GoldenEye,743,321,60,261,True,True
+leave_day_out_Wednesday,development_score_filter,DoS Hulk,16676,4048,1615,2433,True,True
+leave_day_out_Wednesday,development_score_filter,DoS Slowhttptest,397,3,1,2,True,True
+leave_day_out_Wednesday,development_score_filter,DoS slowloris,418,115,44,71,True,True
+leave_day_out_Wednesday,development_score_filter,Heartbleed,11,0,0,0,True,True
+leave_day_out_Wednesday,development_detector,BENIGN,31755,60,60,0,False,False
+leave_day_out_Wednesday,development_detector,DoS GoldenEye,743,321,321,0,True,True
+leave_day_out_Wednesday,development_detector,DoS Hulk,16676,4048,4048,0,True,True
+leave_day_out_Wednesday,development_detector,DoS Slowhttptest,397,3,3,0,True,True
+leave_day_out_Wednesday,development_detector,DoS slowloris,418,115,115,0,True,True
+leave_day_out_Wednesday,development_detector,Heartbleed,11,0,0,0,True,True
+leave_day_out_Wednesday,development_detector_plus_symbolic,BENIGN,31755,60,31,29,False,False
+leave_day_out_Wednesday,development_detector_plus_symbolic,DoS GoldenEye,743,321,13,308,True,True
+leave_day_out_Wednesday,development_detector_plus_symbolic,DoS Hulk,16676,4048,1261,2787,True,True
+leave_day_out_Wednesday,development_detector_plus_symbolic,DoS Slowhttptest,397,3,0,3,True,True
+leave_day_out_Wednesday,development_detector_plus_symbolic,DoS slowloris,418,115,0,115,True,True
+leave_day_out_Wednesday,development_detector_plus_symbolic,Heartbleed,11,0,0,0,True,True

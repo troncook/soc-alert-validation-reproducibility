@@ -1,0 +1,7 @@
+condition,reference,cutoff,baseline_fp,baseline_tp,symbolic_incremental_fp_removed,symbolic_incremental_tp_removed
+duplicate_group_split,development_selected_detector,0.16,358,23563,104,795
+leave_day_out_Monday,development_selected_detector,0.15,247,0,153,0
+leave_day_out_Tuesday,development_selected_detector,0.15,803,606,290,303
+leave_day_out_Wednesday,development_selected_detector,0.15,60,4487,29,3213
+leave_day_out_Thursday,development_selected_detector,0.15,11011,1868,10491,1835
+leave_day_out_Friday,development_selected_detector,0.17,820,18036,147,65
