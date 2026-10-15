@@ -138,6 +138,5 @@ response payloads. No software license has been selected; public visibility is
 not an open-source license grant. The system is not a production intrusion
 prevention system, and these results do not establish operational safety.
 
-Code and analysis preparation used AI assistance under student review. The
-student remains responsible for understanding, checking and explaining the
-methods and any submitted academic claims.
+The student remains responsible for understanding, checking and explaining
+the methods and any submitted academic claims.
