@@ -1,0 +1,242 @@
+{
+  "condition": "leave_day_out_Monday",
+  "independent_saved_csv_recount_passed": true,
+  "missingness": {
+    "alerts_with_missing_validator_fact": 0,
+    "baseline_alerts_with_any_missing_numeric_feature": 0,
+    "missing_fact_counts": {},
+    "test_records_with_any_missing_numeric_feature": 33,
+    "test_records_with_any_missing_validator_fact": 33,
+    "three_valued_disposition_changes": 0,
+    "training_median_disposition_changes": 0
+  },
+  "policies": {
+    "all_predicted_web_out_of_coverage_sensitivity": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 19,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "inconclusive": 19,
+        "supported": 94,
+        "unsupported": 134
+      },
+      "fp_reduction": 0.5425101214574899,
+      "fp_reduction_wilson_ci95": [
+        0.4802042497917791,
+        0.6035139684753661
+      ],
+      "fp_removed": 134,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 113,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49887
+    },
+    "combined_web_brute_and_scan": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 14,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "inconclusive": 14,
+        "supported": 94,
+        "unsupported": 139
+      },
+      "fp_reduction": 0.562753036437247,
+      "fp_reduction_wilson_ci95": [
+        0.5003982952538512,
+        0.6231857412357443
+      ],
+      "fp_removed": 139,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 108,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49892
+    },
+    "existing_rules": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "supported": 94,
+        "unsupported": 153
+      },
+      "fp_reduction": 0.6194331983805668,
+      "fp_reduction_wilson_ci95": [
+        0.5574920153260318,
+        0.6777163121864239
+      ],
+      "fp_removed": 153,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 94,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49906
+    },
+    "missing_required_fact_inconclusive_sensitivity": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "supported": 94,
+        "unsupported": 153
+      },
+      "fp_reduction": 0.6194331983805668,
+      "fp_reduction_wilson_ci95": [
+        0.5574920153260318,
+        0.6777163121864239
+      ],
+      "fp_removed": 153,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 94,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49906
+    },
+    "scan_dead_branch_retired": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "supported": 94,
+        "unsupported": 153
+      },
+      "fp_reduction": 0.6194331983805668,
+      "fp_reduction_wilson_ci95": [
+        0.5574920153260318,
+        0.6777163121864239
+      ],
+      "fp_removed": 153,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 94,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49906
+    },
+    "training_median_validator_facts_sensitivity": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "supported": 94,
+        "unsupported": 153
+      },
+      "fp_reduction": 0.6194331983805668,
+      "fp_reduction_wilson_ci95": [
+        0.5574920153260318,
+        0.6777163121864239
+      ],
+      "fp_removed": 153,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 94,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49906
+    },
+    "web_brute_out_of_coverage": {
+      "baseline_fn": 0,
+      "baseline_fp": 247,
+      "baseline_recall": null,
+      "baseline_tn": 49753,
+      "baseline_tp": 0,
+      "benign": 50000,
+      "break_even_fn_to_fp_cost": null,
+      "changed_dispositions": 14,
+      "cost_break_even_note": "No TP removal; any FP removal is favorable under this simplified count model.",
+      "dispositions": {
+        "inconclusive": 14,
+        "supported": 94,
+        "unsupported": 139
+      },
+      "fp_reduction": 0.562753036437247,
+      "fp_reduction_wilson_ci95": [
+        0.5003982952538512,
+        0.6231857412357443
+      ],
+      "fp_removed": 139,
+      "malicious": 0,
+      "recall_delta": null,
+      "retained_fp": 108,
+      "retained_tp": 0,
+      "test_rows": 50000,
+      "tp_removed": 0,
+      "validated_fn": 0,
+      "validated_recall": null,
+      "validated_tn": 49892
+    }
+  },
+  "reproduction_mismatches": {
+    "baseline_probability": 0,
+    "candidate_technique_id": 0,
+    "disposition": 0,
+    "rule_id": 0,
+    "stored_smt_result": 0,
+    "y_true": 0
+  },
+  "scan_audit": {
+    "scan_alerts": 12,
+    "score_rate_branch_true": 0,
+    "supported_scan_alerts": 0,
+    "syn_branch_true": 0
+  }
+}

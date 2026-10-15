@@ -1,0 +1,159 @@
+{
+  "export_kind": "derived_sanitized_public_provenance",
+  "export_date": "2026-10-15",
+  "evidence_date": "20261013",
+  "original_manifest": {
+    "logical_locator": "retained-20261013/original-manifest",
+    "sha256": "cb68da3ff88a590c44761b72ed6984418ec5c74e82d0a1b85d8697b65570f80a",
+    "included": false
+  },
+  "locator_note": "Logical locators identify retained records by role and hash; they are not private filesystem paths or downloadable public files.",
+  "recorded_run_metadata": {
+    "classification": "local_timing_diagnostic",
+    "config_sha256": "52670953c83d4ca440be5b0ae292a1bd78a7264e7c6a9f4b0bf9e8ebf8699791",
+    "credentials_read": false,
+    "dataset_receipts": [
+      {
+        "file": "Monday-WorkingHours.pcap_ISCX.csv",
+        "raw_rows": 529918,
+        "sample_rows": 50000,
+        "sha256": "852c4beb34eda186f32561fa79df7a0747e92e1a6535b01270820dd9ffe17f34"
+      },
+      {
+        "file": "Tuesday-WorkingHours.pcap_ISCX.csv",
+        "raw_rows": 445909,
+        "sample_rows": 50000,
+        "sha256": "52b8692ae8c7d2ed04671fe2b98335693c0a92c7ab157d8c8b534d6523080851"
+      },
+      {
+        "file": "Wednesday-workingHours.pcap_ISCX.csv",
+        "raw_rows": 692703,
+        "sample_rows": 50000,
+        "sha256": "893c27dc968bf7a8adef1689f90be55ca4a4dc3088fb63d6ff247ac56856df2a"
+      },
+      {
+        "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+        "raw_rows": 170366,
+        "sample_rows": 50000,
+        "sha256": "d67066211fb1689c78406f1506f4c44704ecb92088353d5c96d96d6474eb819d"
+      },
+      {
+        "file": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+        "raw_rows": 288602,
+        "sample_rows": 50000,
+        "sha256": "6bcda3857c2504676034e3ea57762d38393cc734cb377a726bd5cb153961b1b5"
+      },
+      {
+        "file": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+        "raw_rows": 191033,
+        "sample_rows": 50000,
+        "sha256": "53a41c24d570ea83b7ac55b2e94df94e7a8216aeb80a2af0246b6bc8bb543000"
+      },
+      {
+        "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+        "raw_rows": 286467,
+        "sample_rows": 50000,
+        "sha256": "ca1824c51bfbb7b3c72290a11be04366ba8815878c6a1cc5c44cb1cee269e99b"
+      },
+      {
+        "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "raw_rows": 225745,
+        "sample_rows": 50000,
+        "sha256": "6ff1580f5f81c0ae28a26f7631721018577f5f7c5e0feac28b795fcfe7b411ee"
+      }
+    ],
+    "ended_at_utc": "2026-10-13T08:59:11.127654+00:00",
+    "enricher": "mock",
+    "enrichment_schema_sha256": "1ba152643904826bc4a309ad6f23f8c79daaba5ff971bf409dac7b0e80a22ee0",
+    "mock_template_sha256": "4512a61282fb4c382d88fabe9f195a74f030822cbb43948b888921a2a10eb327",
+    "network_calls": 0,
+    "protected_inputs_unchanged": true,
+    "protocol_sha256": "57cb72a75ff40b0dc250e9f34cb70ab37c000850823d81d8707e28c5d518c76d",
+    "raw_data_downloaded": false,
+    "requested_model": null,
+    "resolved_model": null,
+    "rule_implementation_sha256": "8095e46730bba0b0c2bacf552bb38a3c0b216e28864a9ec78c0e44e1f83038f7",
+    "run_id": "corrected_local_timing_20261013",
+    "seed": 42,
+    "started_at_utc": "2026-10-13T08:56:31.720066+00:00",
+    "status": "complete"
+  },
+  "original_source_hashes": {
+    "original_timing_entry_point": "84c966b6c7bdb649297564215096a174484485e8386669a498f1ff90a8ce119f",
+    "original_corrected_validator": "8095e46730bba0b0c2bacf552bb38a3c0b216e28864a9ec78c0e44e1f83038f7",
+    "historical_pipeline": "f15d5d877292f1168a19f59148b7908b32fa5994992ac8a1901216b1fe37c269",
+    "historical_corrective_evaluation": "37d66f74797368a8eb2a563edae96f18f0a5658880778c63c1ddedc74b431ab7"
+  },
+  "omissions": [
+    "private Git commit/status/diff",
+    "absolute paths and executable location",
+    "row-level CSV/JSONL and predictions",
+    "individual record identities and feature fingerprints",
+    "raw dataset contents",
+    "credentials and cached hosted payloads",
+    "manuscripts, correspondence, comments and private review documents"
+  ],
+  "verification_scope": "Exact copied aggregate bytes and arithmetic can be checked publicly. Original saved-row audits are retained evidence, not independent external replication. Raw-data reproduction and timing require separately obtained data and new local execution.",
+  "files": {
+    "results.json": {
+      "sha256": "718aa7b6e68f5894fda1f604b97d70cfe7aebf50aa7926369b95c634b86dd8d5",
+      "bytes": 10388,
+      "source": {
+        "logical_locator": "retained-20261013/results.json",
+        "sha256": "718aa7b6e68f5894fda1f604b97d70cfe7aebf50aa7926369b95c634b86dd8d5"
+      },
+      "transformation": "exact bytes; no numerical values changed"
+    },
+    "protocol.md": {
+      "sha256": "267d067dbaaa77b884543a7b735c3810c48b71526304327217515da47b1f5bd5",
+      "bytes": 4870,
+      "source": {
+        "logical_locator": "retained-20261013/protocol.md",
+        "sha256": "267d067dbaaa77b884543a7b735c3810c48b71526304327217515da47b1f5bd5"
+      },
+      "transformation": "exact bytes; no numerical values changed"
+    },
+    "boundary_checks.json": {
+      "sha256": "13c22dca81c259571b6605f332b5aca3e608e2b1e9d26559bd26a3c4d5a9060b",
+      "bytes": 668,
+      "source": {
+        "logical_locator": "retained-20261013/boundary_checks.json",
+        "sha256": "13c22dca81c259571b6605f332b5aca3e608e2b1e9d26559bd26a3c4d5a9060b"
+      },
+      "transformation": "exact bytes; no numerical values changed"
+    },
+    "frozen_config.json": {
+      "sha256": "52670953c83d4ca440be5b0ae292a1bd78a7264e7c6a9f4b0bf9e8ebf8699791",
+      "bytes": 1368,
+      "source": {
+        "logical_locator": "retained-20261013/frozen_config.json",
+        "sha256": "52670953c83d4ca440be5b0ae292a1bd78a7264e7c6a9f4b0bf9e8ebf8699791"
+      },
+      "transformation": "exact bytes; no numerical values changed"
+    },
+    "independent_checks.json": {
+      "sha256": "e30e12a3343009726d1d915b31a445d6b8bec47df4d4df6cd475d3d30bb014fb",
+      "bytes": 16391,
+      "source": {
+        "logical_locator": "retained-20261013/independent_checks.json",
+        "sha256": "e30e12a3343009726d1d915b31a445d6b8bec47df4d4df6cd475d3d30bb014fb"
+      },
+      "transformation": "exact bytes; no numerical values changed"
+    },
+    "environment.json": {
+      "sha256": "4731fdf57dcde5cbbeb498d094306f7c007f33340e51944b1856c63b973ed07c",
+      "bytes": 922,
+      "source": {
+        "logical_locator": "retained-20261013/environment.json",
+        "sha256": "6820d6d1249d752b070fc39bde4ddd2e1e1593e0b4cbe71ef963dd7362a546c5"
+      },
+      "transformation": "executable absolute path omitted; all hardware, package, clock and platform values unchanged"
+    },
+    "SUMMARY.md": {
+      "sha256": "73bc8ec1049deaee55038e22fdc382abe95c809137538338d8a33c4773771dd5",
+      "bytes": 2174,
+      "source": null,
+      "transformation": "new public explanatory summary; values trace to included unchanged aggregates"
+    }
+  }
+}

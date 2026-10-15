@@ -1,0 +1,356 @@
+{
+  "classification": "local_timing_diagnostic",
+  "confidence_interval": null,
+  "confidence_interval_note": "No iid interval claimed for temporally dependent sequential timing observations; full workload summaries and repeat variability are reported.",
+  "corrected_local_mean_target_met": true,
+  "criterion": "Full corrected local serial mean < 1.0 second",
+  "criterion_seconds": 1.0,
+  "decision_mismatches": 0,
+  "detector_fits": 0,
+  "excluded": [
+    "dataset loading",
+    "detector fitting/inference",
+    "input dictionary construction",
+    "serialization and disk I/O",
+    "network and hosted model calls"
+  ],
+  "fp_removed": 82,
+  "full_corrected": {
+    "alerts": 23939,
+    "at_or_above_one_second": 0,
+    "dispositions": {
+      "inconclusive": 839,
+      "supported": 22693,
+      "unsupported": 407
+    },
+    "ended_at_utc": "2026-10-13T08:58:45.628680+00:00",
+    "maximum_seconds": 0.0513031,
+    "mean_enrichment_seconds": 0.0001536650068925185,
+    "mean_seconds": 0.002336484894941309,
+    "mean_validation_seconds": 0.0021828198880487907,
+    "median_seconds": 0.0020981,
+    "p95_seconds": 0.00426322,
+    "phase": "full",
+    "policy": "corrected",
+    "repeat": 0,
+    "smt_results": {
+      "not_applicable": 839,
+      "sat": 22693,
+      "unsat": 407
+    },
+    "started_at_utc": "2026-10-13T08:57:49.506330+00:00"
+  },
+  "full_warmup_alerts": 25,
+  "historical_september_full_mean_seconds": 0.0035520717490287817,
+  "hosted_calls": 0,
+  "included": [
+    "fresh mock enrichment",
+    "ordinary fact normalization",
+    "corrected rule dispatch",
+    "applicable SMT construction and solve",
+    "returned in-memory validation record"
+  ],
+  "input_hashes_unchanged": true,
+  "interpretation": "Observed finite-workload serial local timing on current workstation, with warmed repeats; not production throughput, external latency, operational safety or a causal speedup.",
+  "policy": "combined_web_brute_and_scan",
+  "repeat_order": [
+    {
+      "policy": "original",
+      "repeat": 1
+    },
+    {
+      "policy": "corrected",
+      "repeat": 1
+    },
+    {
+      "policy": "corrected",
+      "repeat": 2
+    },
+    {
+      "policy": "original",
+      "repeat": 2
+    },
+    {
+      "policy": "original",
+      "repeat": 3
+    },
+    {
+      "policy": "corrected",
+      "repeat": 3
+    },
+    {
+      "policy": "corrected",
+      "repeat": 4
+    },
+    {
+      "policy": "original",
+      "repeat": 4
+    },
+    {
+      "policy": "original",
+      "repeat": 5
+    },
+    {
+      "policy": "corrected",
+      "repeat": 5
+    }
+  ],
+  "repeat_summaries": [
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 16,
+        "supported": 961,
+        "unsupported": 23
+      },
+      "ended_at_utc": "2026-10-13T08:58:48.207127+00:00",
+      "maximum_seconds": 0.0055829,
+      "mean_enrichment_seconds": 0.0001429633,
+      "mean_seconds": 0.0022544715000000002,
+      "mean_validation_seconds": 0.0021115082000000003,
+      "median_seconds": 0.00208075,
+      "p95_seconds": 0.0035649799999999993,
+      "phase": "repeat",
+      "policy": "original",
+      "repeat": 1,
+      "smt_results": {
+        "not_applicable": 16,
+        "sat": 961,
+        "unsat": 23
+      },
+      "started_at_utc": "2026-10-13T08:58:45.943989+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 32,
+        "supported": 961,
+        "unsupported": 7
+      },
+      "ended_at_utc": "2026-10-13T08:58:50.300724+00:00",
+      "maximum_seconds": 0.0059796,
+      "mean_enrichment_seconds": 0.0001388675,
+      "mean_seconds": 0.0020860877,
+      "mean_validation_seconds": 0.0019472202,
+      "median_seconds": 0.0020128000000000004,
+      "p95_seconds": 0.003215219999999999,
+      "phase": "repeat",
+      "policy": "corrected",
+      "repeat": 1,
+      "smt_results": {
+        "not_applicable": 32,
+        "sat": 961,
+        "unsat": 7
+      },
+      "started_at_utc": "2026-10-13T08:58:48.208127+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 32,
+        "supported": 961,
+        "unsupported": 7
+      },
+      "ended_at_utc": "2026-10-13T08:58:52.492453+00:00",
+      "maximum_seconds": 0.011086,
+      "mean_enrichment_seconds": 0.0001442302,
+      "mean_seconds": 0.0021839059,
+      "mean_validation_seconds": 0.0020396757,
+      "median_seconds": 0.0019952,
+      "p95_seconds": 0.0035431,
+      "phase": "repeat",
+      "policy": "corrected",
+      "repeat": 2,
+      "smt_results": {
+        "not_applicable": 32,
+        "sat": 961,
+        "unsat": 7
+      },
+      "started_at_utc": "2026-10-13T08:58:50.301719+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 16,
+        "supported": 961,
+        "unsupported": 23
+      },
+      "ended_at_utc": "2026-10-13T08:58:54.834416+00:00",
+      "maximum_seconds": 0.0108487,
+      "mean_enrichment_seconds": 0.0001483895,
+      "mean_seconds": 0.0023337165,
+      "mean_validation_seconds": 0.002185327,
+      "median_seconds": 0.00213375,
+      "p95_seconds": 0.003914614999999999,
+      "phase": "repeat",
+      "policy": "original",
+      "repeat": 2,
+      "smt_results": {
+        "not_applicable": 16,
+        "sat": 961,
+        "unsat": 23
+      },
+      "started_at_utc": "2026-10-13T08:58:52.492453+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 16,
+        "supported": 961,
+        "unsupported": 23
+      },
+      "ended_at_utc": "2026-10-13T08:58:57.071452+00:00",
+      "maximum_seconds": 0.011137,
+      "mean_enrichment_seconds": 0.0001398522,
+      "mean_seconds": 0.0022278411,
+      "mean_validation_seconds": 0.0020879888999999997,
+      "median_seconds": 0.0020165499999999998,
+      "p95_seconds": 0.003620649999999998,
+      "phase": "repeat",
+      "policy": "original",
+      "repeat": 3,
+      "smt_results": {
+        "not_applicable": 16,
+        "sat": 961,
+        "unsat": 23
+      },
+      "started_at_utc": "2026-10-13T08:58:54.836417+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 32,
+        "supported": 961,
+        "unsupported": 7
+      },
+      "ended_at_utc": "2026-10-13T08:58:59.346416+00:00",
+      "maximum_seconds": 0.0108856,
+      "mean_enrichment_seconds": 0.0001535591,
+      "mean_seconds": 0.0022666169,
+      "mean_validation_seconds": 0.0021130577999999996,
+      "median_seconds": 0.00202305,
+      "p95_seconds": 0.004179059999999999,
+      "phase": "repeat",
+      "policy": "corrected",
+      "repeat": 3,
+      "smt_results": {
+        "not_applicable": 32,
+        "sat": 961,
+        "unsat": 7
+      },
+      "started_at_utc": "2026-10-13T08:58:57.072453+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 32,
+        "supported": 961,
+        "unsupported": 7
+      },
+      "ended_at_utc": "2026-10-13T08:59:01.496348+00:00",
+      "maximum_seconds": 0.0198,
+      "mean_enrichment_seconds": 0.0001369687,
+      "mean_seconds": 0.0021421482,
+      "mean_validation_seconds": 0.0020051795,
+      "median_seconds": 0.00199945,
+      "p95_seconds": 0.0036491149999999992,
+      "phase": "repeat",
+      "policy": "corrected",
+      "repeat": 4,
+      "smt_results": {
+        "not_applicable": 32,
+        "sat": 961,
+        "unsat": 7
+      },
+      "started_at_utc": "2026-10-13T08:58:59.347453+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 16,
+        "supported": 961,
+        "unsupported": 23
+      },
+      "ended_at_utc": "2026-10-13T08:59:03.854355+00:00",
+      "maximum_seconds": 0.0252614,
+      "mean_enrichment_seconds": 0.0001674808,
+      "mean_seconds": 0.0023485862,
+      "mean_validation_seconds": 0.0021811053999999997,
+      "median_seconds": 0.0020577,
+      "p95_seconds": 0.004055425,
+      "phase": "repeat",
+      "policy": "original",
+      "repeat": 4,
+      "smt_results": {
+        "not_applicable": 16,
+        "sat": 961,
+        "unsat": 23
+      },
+      "started_at_utc": "2026-10-13T08:59:01.497347+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 16,
+        "supported": 961,
+        "unsupported": 23
+      },
+      "ended_at_utc": "2026-10-13T08:59:06.202107+00:00",
+      "maximum_seconds": 0.0422114,
+      "mean_enrichment_seconds": 0.0001457509,
+      "mean_seconds": 0.0023396182999999996,
+      "mean_validation_seconds": 0.0021938674,
+      "median_seconds": 0.00207435,
+      "p95_seconds": 0.0039628549999999995,
+      "phase": "repeat",
+      "policy": "original",
+      "repeat": 5,
+      "smt_results": {
+        "not_applicable": 16,
+        "sat": 961,
+        "unsat": 23
+      },
+      "started_at_utc": "2026-10-13T08:59:03.854355+00:00"
+    },
+    {
+      "alerts": 1000,
+      "at_or_above_one_second": 0,
+      "dispositions": {
+        "inconclusive": 32,
+        "supported": 961,
+        "unsupported": 7
+      },
+      "ended_at_utc": "2026-10-13T08:59:08.430512+00:00",
+      "maximum_seconds": 0.0110036,
+      "mean_enrichment_seconds": 0.00014689639999999998,
+      "mean_seconds": 0.0022208549,
+      "mean_validation_seconds": 0.0020739585,
+      "median_seconds": 0.0019629,
+      "p95_seconds": 0.004532235,
+      "phase": "repeat",
+      "policy": "corrected",
+      "repeat": 5,
+      "smt_results": {
+        "not_applicable": 32,
+        "sat": 961,
+        "unsat": 7
+      },
+      "started_at_utc": "2026-10-13T08:59:06.203105+00:00"
+    }
+  ],
+  "repeat_warmup_alerts_per_policy": 25,
+  "replaces_historical_results": false,
+  "run_id": "corrected_local_timing_20261013",
+  "smt_disagreements": 0,
+  "status": "passed",
+  "tp_removed": 325
+}

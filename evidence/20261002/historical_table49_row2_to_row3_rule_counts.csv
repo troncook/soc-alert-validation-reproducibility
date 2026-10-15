@@ -1,0 +1,3 @@
+original_rule_id,candidate_technique_id,predicted_label,y_true,table49_row2_disposition,table49_row3_disposition,alerts
+RULE_REMOTE_SERVICE_BRUTE_FORCE,T1110,Web Attack � Brute Force,0,unsupported,inconclusive,35
+RULE_REMOTE_SERVICE_BRUTE_FORCE,T1110,Web Attack � Brute Force,1,unsupported,inconclusive,511

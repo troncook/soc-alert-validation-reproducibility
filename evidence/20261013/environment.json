@@ -1,0 +1,32 @@
+{
+  "clock": {
+    "adjustable": false,
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "resolution": 1e-07
+  },
+  "hardware": {
+    "captured_utc": "2026-10-13T08:50:01.3386814Z",
+    "cpu": {
+      "MaxClockSpeed": 2592,
+      "Name": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+      "NumberOfCores": 6,
+      "NumberOfLogicalProcessors": 12
+    },
+    "isolation": "Ordinary user workstation; concurrent OS and app load not controlled",
+    "process_priority": "Normal",
+    "total_physical_memory_bytes": 17049841664
+  },
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.6.0",
+    "z3-solver": "4.16.0.0"
+  },
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+  "z3_version": "4.16.0"
+}

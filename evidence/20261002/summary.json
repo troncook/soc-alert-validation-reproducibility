@@ -1,0 +1,46 @@
+{
+  "classification": "retrospective_validation_only_policy_sensitivity",
+  "historical_table49_trace": {
+    "changed_alerts": 546,
+    "method": "Compare each frozen alert under the original Table 4.9 row2 T1190 and row3 predicted-Web policies; only originally unsupported dispositions are reclassified in that historical table.",
+    "rule_attribution": [
+      {
+        "alerts": 35,
+        "candidate_technique_id": "T1110",
+        "original_rule_id": "RULE_REMOTE_SERVICE_BRUTE_FORCE",
+        "predicted_label": "Web Attack � Brute Force",
+        "table49_row2_disposition": "unsupported",
+        "table49_row3_disposition": "inconclusive",
+        "y_true": 0
+      },
+      {
+        "alerts": 511,
+        "candidate_technique_id": "T1110",
+        "original_rule_id": "RULE_REMOTE_SERVICE_BRUTE_FORCE",
+        "predicted_label": "Web Attack � Brute Force",
+        "table49_row2_disposition": "unsupported",
+        "table49_row3_disposition": "inconclusive",
+        "y_true": 1
+      }
+    ]
+  },
+  "latency": "No new operational latency or H3 result claimed. Replay omits full-alert SMT timing; original stored SMT agrees exactly, and modified scan SMT is independently tested at four boundary fixtures.",
+  "policy_scope": {
+    "all_web": "Separate broader predicted-Web coverage sensitivity, not the selected narrow correction.",
+    "combined": "Narrow Web-Brute coverage correction plus scan branch retirement.",
+    "missingness": "Fixed frozen candidate hypothesis; compare zero-normalized facts to frozen condition-specific training medians and rule-specific three-valued logic. Decisive true/false branches resolve even when another fact is unknown.",
+    "scan": "Remove impossible SYN>2 AND total_packets<300 alternative; preserve score>=.80 AND packets/s>1000 exactly. No new threshold.",
+    "web_brute": "Predicted label starts Web Attack and contains brute; flow features cannot establish web login attempts, therefore T1110 mapped but out of rule coverage and retained inconclusive."
+  },
+  "raw_sample": {
+    "feature_count": 78,
+    "missing_numeric_cells": 648,
+    "records_with_any_missing_or_nonfinite_numeric_feature": 324,
+    "sample_rows": 400000,
+    "source_note": "Original standardize_columns converts nonfinite values to NaN before sampling; audit preserves that sampled raw/nonfinite-as-missing frame.",
+    "syn_flag_max": 1.0,
+    "syn_flag_min": 0.0
+  },
+  "replaces_original_artifacts": false,
+  "run_id": "advisor_validation_replay_20261002"
+}

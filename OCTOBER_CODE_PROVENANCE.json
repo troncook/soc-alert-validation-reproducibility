@@ -1,0 +1,62 @@
+{
+  "scope": "Portable public October extension; historical pipeline and corrective evaluation remain unchanged.",
+  "original_sources": [
+    {
+      "path": "scripts/corrected_validator_for_timing_20261013.py",
+      "sha256": "8095e46730bba0b0c2bacf552bb38a3c0b216e28864a9ec78c0e44e1f83038f7",
+      "public_path": "scripts/corrected_validator_for_timing_20261013.py",
+      "copy": "byte-for-byte"
+    },
+    {
+      "path": "scripts/time_corrected_policy_20261013.py",
+      "sha256": "84c966b6c7bdb649297564215096a174484485e8386669a498f1ff90a8ce119f",
+      "public_path": "scripts/time_corrected_policy_20261013.py",
+      "copied_functions": [
+        {
+          "name": "self_test",
+          "unchanged_source_text": true,
+          "source_text_sha256": "373cd92d7857acceaea94d4d1b035ee731f334446bf5cf4a44c8e9c5948fcd20"
+        },
+        {
+          "name": "summarize",
+          "unchanged_source_text": true,
+          "source_text_sha256": "bff05d648ad16daad00c617cc0c9b77ddfef1a9a6d852d8fc496002bb3038b5a"
+        },
+        {
+          "name": "timed_pass",
+          "unchanged_source_text": true,
+          "source_text_sha256": "5703a69010814b64215a1016ebc85e215b228b91f7415f60825abbc49b4db6ae"
+        }
+      ],
+      "adaptation": "Replace private paths, specific prior smoke/workstation files and manuscript receipts with explicit public frozen-run/replay/output parameters. Preserve warmup, record shape, fixed seeded sample, five alternating passes, clock boundaries and summaries."
+    },
+    {
+      "path": "scripts/replay_advisor_validation_20261002.py",
+      "sha256": "7644ce6969eecd425a4d31c36ff66fcaf5452c0d92ca3c6f4c67c99d46632d3c",
+      "public_path": "scripts/replay_october_policy.py",
+      "adaptation": "Retain original/web-brute/scan-retired/combined expressions and metrics/bootstrap through unchanged corrective_evaluation. Restrict to duplicate_group_split and retain its locked score comparator. Exclude June, broad-Web, training-median and three-valued sensitivities; no private analysis-helper import."
+    }
+  ],
+  "shared_loader": "scripts/october_frozen_common.py is new portable orchestration. It reconstructs the original full-pass/repeat record shapes and verifies source/output/dataset receipts, exact row identities, feature fingerprints, selection lock and original saved decisions before evaluation.",
+  "unchanged_historical_sources": [
+    {
+      "path": "src/soc_validation_experiment/pipeline.py",
+      "sha256": "f15d5d877292f1168a19f59148b7908b32fa5994992ac8a1901216b1fe37c269"
+    },
+    {
+      "path": "src/soc_validation_experiment/corrective_evaluation.py",
+      "sha256": "37d66f74797368a8eb2a563edae96f18f0a5658880778c63c1ddedc74b431ab7"
+    }
+  ],
+  "verification_scope": "Focused synthetic rule/SMT, input-integrity, CLI-contract, record-shape and timing-order tests. No new full-dataset experiment or claim of reproducing the original workstation latency.",
+  "private_dependencies_removed": [
+    "Manuscript and advisor files",
+    "Specific private smoke-output directory",
+    "Specific local hardware receipt",
+    "Full analysis helper",
+    "June historical row artifacts"
+  ],
+  "network_calls": 0,
+  "hosted_calls": 0,
+  "raw_dataset_included": false
+}

@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "alert_threshold": 0.15,
+    "class_weight": "balanced",
+    "model": "random_forest",
+    "n_estimators": 100,
+    "task": "multiclass",
+    "test_size": 0.3,
+    "validation_size": 0.2
+  },
+  "data": {
+    "csv_paths": [
+      "data/raw/cicids2017/Monday-WorkingHours.pcap_ISCX.csv",
+      "data/raw/cicids2017/Tuesday-WorkingHours.pcap_ISCX.csv",
+      "data/raw/cicids2017/Wednesday-workingHours.pcap_ISCX.csv",
+      "data/raw/cicids2017/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "data/raw/cicids2017/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "data/raw/cicids2017/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "data/raw/cicids2017/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "data/raw/cicids2017/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+    ],
+    "synthetic_rows": 2000
+  },
+  "llm": {
+    "max_output_tokens": 500,
+    "model": "gpt-5.4-mini",
+    "temperature": 0,
+    "timeout_seconds": 180,
+    "top_p": 1
+  },
+  "run": {
+    "enricher": "mock",
+    "max_alerts": 0,
+    "max_rows": 50000,
+    "name": "cicids2017_full_candidate",
+    "output_root": "outputs/runs",
+    "seed": 42
+  },
+  "validation": {
+    "false_positive_reduction_target": 0.3,
+    "latency_target_seconds": 1.0,
+    "recall_margin": 0.05
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "all_seven_solver_fact_bindings_preserved": true,
+  "count": 9,
+  "status": "passed",
+  "tests": [
+    "Predicted web brute force exits as inconclusive without SMT",
+    "Scan Python and SMT boundary score=0.8, rate=1000, SYN=1",
+    "Scan Python and SMT boundary score=0.8, rate=1001, SYN=1",
+    "Scan Python and SMT boundary score=0.79, rate=1001, SYN=1",
+    "Scan Python and SMT boundary score=0.2, rate=0, SYN=3",
+    "Unchanged rule and SMT behavior for FTP-Patator",
+    "Unchanged rule and SMT behavior for DoS Hulk",
+    "Unchanged rule and SMT behavior for Web Attack - XSS",
+    "Unchanged rule and SMT behavior for unclassified"
+  ]
+}

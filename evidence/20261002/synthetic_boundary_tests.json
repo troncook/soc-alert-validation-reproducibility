@@ -1,0 +1,14 @@
+{
+  "modified_scan_SMT_boundaries_passed": 4,
+  "passed": 8,
+  "tests": [
+    "Web-Brute on port80 retains mapped T1110 but returns out-of-coverage/inconclusive",
+    "FTP-Patator is not reclassified by the web-only policy",
+    "Changed scan predicate and SMT boundary score=0.8,rate=1000,syn=1",
+    "Changed scan predicate and SMT boundary score=0.8,rate=1001,syn=1",
+    "Changed scan predicate and SMT boundary score=0.79,rate=1001,syn=1",
+    "Changed scan predicate and SMT boundary score=0.2,rate=0,syn=3",
+    "Unknown scan rate separates zero fallback, training-median, and three-valued policies",
+    "Known true DoS branch resolves OR despite missing rate"
+  ]
+}

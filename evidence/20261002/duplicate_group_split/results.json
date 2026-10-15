@@ -1,0 +1,396 @@
+{
+  "condition": "duplicate_group_split",
+  "independent_saved_csv_recount_passed": true,
+  "missingness": {
+    "alerts_with_missing_validator_fact": 14,
+    "baseline_alerts_with_any_missing_numeric_feature": 14,
+    "missing_fact_counts": {
+      "Flow Bytes/s": 14,
+      "Flow Packets/s": 14
+    },
+    "test_records_with_any_missing_numeric_feature": 80,
+    "test_records_with_any_missing_validator_fact": 80,
+    "three_valued_disposition_changes": 10,
+    "training_median_disposition_changes": 0
+  },
+  "policies": {
+    "all_predicted_web_out_of_coverage_sensitivity": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.45864661654135336,
+      "changed_dispositions": 718,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 1052,
+        "supported": 22693,
+        "unsupported": 194
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.12180740761568688,
+          0.20222645429362882
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.006721439568239385,
+          -0.0046350342756480865
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.16266666666666665,
+      "fp_reduction_wilson_ci95": [
+        0.12876654544116828,
+        0.20340791934003444
+      ],
+      "fp_removed": 61,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.005634876922425115,
+      "recall_loss_percentage_points_ci95": [
+        0.46350342756480867,
+        0.6721439568239386
+      ],
+      "retained_fp": 314,
+      "retained_tp": 23431,
+      "test_rows": 120059,
+      "tp_removed": 133,
+      "validated_fn": 172,
+      "validated_recall": 0.992712790746939,
+      "validated_tn": 96142
+    },
+    "combined_web_brute_and_scan": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.2523076923076923,
+      "changed_dispositions": 505,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 839,
+        "supported": 22693,
+        "unsupported": 407
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.17282642812303828,
+          0.2620522578746864
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.01550474984367058,
+          -0.012260476945691766
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.21866666666666668,
+      "fp_reduction_wilson_ci95": [
+        0.17979918397434969,
+        0.26323959890641624
+      ],
+      "fp_removed": 82,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.0137694360886328,
+      "recall_loss_percentage_points_ci95": [
+        1.2260476945691765,
+        1.550474984367058
+      ],
+      "retained_fp": 293,
+      "retained_tp": 23239,
+      "test_rows": 120059,
+      "tp_removed": 325,
+      "validated_fn": 364,
+      "validated_recall": 0.9845782315807312,
+      "validated_tn": 96163
+    },
+    "existing_rules": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.1471698113207547,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 334,
+        "supported": 22693,
+        "unsupported": 912
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.2612809368321436,
+          0.35870261984392415
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.03644770095295779,
+          -0.030922748984673377
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.312,
+      "fp_reduction_wilson_ci95": [
+        0.2672131807553133,
+        0.36059946562472456
+      ],
+      "fp_removed": 117,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.033682159047578694,
+      "recall_loss_percentage_points_ci95": [
+        3.0922748984673376,
+        3.6447700952957787
+      ],
+      "retained_fp": 258,
+      "retained_tp": 22769,
+      "test_rows": 120059,
+      "tp_removed": 795,
+      "validated_fn": 834,
+      "validated_recall": 0.9646655086217854,
+      "validated_tn": 96198
+    },
+    "missing_required_fact_inconclusive_sensitivity": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.1475826972010178,
+      "changed_dispositions": 10,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 344,
+        "supported": 22693,
+        "unsupported": 902
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.2595864161709947,
+          0.3541544140288212
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.036092750138600464,
+          -0.030602230350963322
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.30933333333333335,
+      "fp_reduction_wilson_ci95": [
+        0.26468221189911423,
+        0.35785118123808735
+      ],
+      "fp_removed": 116,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.03330085158666271,
+      "recall_loss_percentage_points_ci95": [
+        3.060223035096332,
+        3.6092750138600462
+      ],
+      "retained_fp": 259,
+      "retained_tp": 22778,
+      "test_rows": 120059,
+      "tp_removed": 786,
+      "validated_fn": 825,
+      "validated_recall": 0.9650468160827014,
+      "validated_tn": 96197
+    },
+    "scan_dead_branch_retired": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.1471698113207547,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 334,
+        "supported": 22693,
+        "unsupported": 912
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.2612809368321436,
+          0.35870261984392415
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.03644770095295779,
+          -0.030922748984673377
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.312,
+      "fp_reduction_wilson_ci95": [
+        0.2672131807553133,
+        0.36059946562472456
+      ],
+      "fp_removed": 117,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.033682159047578694,
+      "recall_loss_percentage_points_ci95": [
+        3.0922748984673376,
+        3.6447700952957787
+      ],
+      "retained_fp": 258,
+      "retained_tp": 22769,
+      "test_rows": 120059,
+      "tp_removed": 795,
+      "validated_fn": 834,
+      "validated_recall": 0.9646655086217854,
+      "validated_tn": 96198
+    },
+    "training_median_validator_facts_sensitivity": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.1471698113207547,
+      "changed_dispositions": 0,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 334,
+        "supported": 22693,
+        "unsupported": 912
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.2612809368321436,
+          0.35870261984392415
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.03644770095295779,
+          -0.030922748984673377
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.312,
+      "fp_reduction_wilson_ci95": [
+        0.2672131807553133,
+        0.36059946562472456
+      ],
+      "fp_removed": 117,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.033682159047578694,
+      "recall_loss_percentage_points_ci95": [
+        3.0922748984673376,
+        3.6447700952957787
+      ],
+      "retained_fp": 258,
+      "retained_tp": 22769,
+      "test_rows": 120059,
+      "tp_removed": 795,
+      "validated_fn": 834,
+      "validated_recall": 0.9646655086217854,
+      "validated_tn": 96198
+    },
+    "web_brute_out_of_coverage": {
+      "baseline_fn": 39,
+      "baseline_fp": 375,
+      "baseline_recall": 0.9983476676693641,
+      "baseline_tn": 96081,
+      "baseline_tp": 23564,
+      "benign": 96456,
+      "break_even_fn_to_fp_cost": 0.2523076923076923,
+      "changed_dispositions": 505,
+      "cost_break_even_note": "Assumed relative error costs, not measured SOC costs.",
+      "dispositions": {
+        "inconclusive": 839,
+        "supported": 22693,
+        "unsupported": 407
+      },
+      "feature_group_bootstrap": {
+        "draws": 1000,
+        "fp_reduction_ci95": [
+          0.17282642812303828,
+          0.2620522578746864
+        ],
+        "groups": 114073,
+        "recall_delta_ci95": [
+          -0.01550474984367058,
+          -0.012260476945691766
+        ],
+        "scope": "Descriptive resampling of exact-feature groups; does not prove independence of near-related traffic.",
+        "valid_fp_draws": 1000,
+        "valid_recall_draws": 1000
+      },
+      "fp_reduction": 0.21866666666666668,
+      "fp_reduction_wilson_ci95": [
+        0.17979918397434969,
+        0.26323959890641624
+      ],
+      "fp_removed": 82,
+      "h1_interval_support": false,
+      "h2_interval_within_five_percentage_points": true,
+      "malicious": 23603,
+      "recall_delta": -0.0137694360886328,
+      "recall_loss_percentage_points_ci95": [
+        1.2260476945691765,
+        1.550474984367058
+      ],
+      "retained_fp": 293,
+      "retained_tp": 23239,
+      "test_rows": 120059,
+      "tp_removed": 325,
+      "validated_fn": 364,
+      "validated_recall": 0.9845782315807312,
+      "validated_tn": 96163
+    }
+  },
+  "reproduction_mismatches": {
+    "baseline_probability": 0,
+    "candidate_technique_id": 0,
+    "disposition": 0,
+    "rule_id": 0,
+    "stored_smt_result": 0,
+    "y_true": 0
+  },
+  "scan_audit": {
+    "scan_alerts": 8391,
+    "score_rate_branch_true": 8279,
+    "supported_scan_alerts": 8279,
+    "syn_branch_true": 0
+  }
+}

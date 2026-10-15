@@ -1,26 +1,67 @@
 # SOC alert validation reproducibility
 
-Research code for a local post-detection symbolic validation experiment using
-CICIDS2017. This repository supports professor review and reproducibility; it is
-not a production intrusion prevention system or evidence of operational safety.
+Research code for local post-detection symbolic validation of CICIDS2017 alerts.
+The system records supported, unsupported or inconclusive rule checks. These
+are model-relative dispositions: **unsupported does not mean benign**.
 
-## Scope
+## Current results — version 1.1.0
 
-The corrective evaluation keeps the existing capped eight-file sample,
-100-tree Random Forest, deterministic enrichment and symbolic predicates. It
-adds train-only imputation, duplicate-group separation, development-only
-threshold selection and five capture-day holdout challenges. Historical study
-targets are sensitivity anchors, not universal SOC standards.
+This release adds the October 2 policy correction and the separate October 13
+local timing diagnostic. The correction reuses frozen September predictions;
+it does not retrain the detector, select new thresholds or use a hosted model.
 
-The [dated protocol](docs/remediation_protocol_20260905.md) was recorded before
-the new outcome calculations. Earlier dataset results were already known, so
-this is a retrospective corrective re-evaluation, not an externally independent
-confirmation or a claim of retrospective preregistration.
+The group-separated test set contains 120,059 records, including 23,603 malicious
+records. The fixed 0.15 reference queue has 23,939 alerts: 375 false positives
+(FP) and 23,564 true positives (TP). All three rows use that same queue.
 
-## Reproduce
+| Policy | FP removed | TP removed | Additional recall loss (percentage points) |
+| --- | ---: | ---: | ---: |
+| October corrected symbolic policy | 82 | 325 | 1.3769 |
+| Frozen development-selected score filter (0.21) | 110 | 11 | 0.0466 |
+| September original symbolic policy — historical | 117 | 795 | 3.3682 |
 
-The recorded execution environment is Python 3.11.4 with the pinned packages in
-`requirements-lock.txt`. Use an isolated local environment. No API key is needed.
+The score filter removes **28 more false positives and 314 fewer true positives**
+than the corrected symbolic policy. The correction improves the symbolic
+policy's recall tradeoff, but does not establish an advantage over this comparator.
+
+- **H1: not met.** FP reduction is 21.867%, below the study's 30% target.
+- **H2: met conditionally on the declared analysis.** Additional recall loss is
+  1.3769 percentage points; its 95% exact-feature-group bootstrap interval is
+  1.2260–1.5505 points, within the five-point margin. Losing 325 detected attacks
+  remains consequential. Grouping exact feature matches does not establish
+  independence of all related traffic or safe alert suppression.
+- **H3: met for the measured local workload.** Fresh deterministic enrichment
+  plus corrected validation, including applicable Z3 checks, averaged 2.336 ms
+  across 23,939 alerts after 25 untimed warmups. Five repeats of one fixed
+  1,000-alert sample had means of 2.086–2.267 ms. This excludes detector inference,
+  hosted/network calls and I/O; it is not production throughput or a speedup claim.
+
+The historical targets and rule thresholds are study-specific. No retained
+original calibration establishes them as universal SOC standards. No analyst
+workload, decision-quality or time-saving benefit was measured.
+
+See the [October methods and evidence guide](docs/october_update_20261015.md),
+[policy evidence](evidence/20261002/SUMMARY.md) and
+[timing evidence](evidence/20261013/SUMMARY.md) for the exact scope and limitations.
+
+## Check the published evidence
+
+These standard-library checks need no dataset, API key or model fitting:
+
+```sh
+python scripts/verify_published_evidence.py
+python scripts/verify_october_evidence.py
+```
+
+They check the public aggregate records, arithmetic and hashes. They cannot
+independently recount unpublished row-level evidence or rerun the recorded
+benchmark. The original local review receipts are retained as evidence of those
+checks, separately from what a reader can verify from this public package.
+
+## Reproduce locally
+
+The recorded environment is Python 3.11.4 with packages pinned in
+`requirements-lock.txt`. Use an isolated environment. No API key is required.
 
 ```sh
 python -m venv .venv
@@ -30,101 +71,72 @@ python -m unittest discover -s tests -v
 python scripts/run_corrective_evaluation.py --synthetic --output outputs/synthetic_check
 ```
 
-Obtain CICIDS2017 MachineLearningCSV files from the
-[original UNB dataset source](https://www.unb.ca/cic/datasets/ids-2017.html).
-Place the eight files named in `config/cicids2017_full_candidate.toml` under
-`data/raw/cicids2017/`. The data are not redistributed here. Then run:
+Obtain the eight CICIDS2017 MachineLearningCSV files named in
+`config/cicids2017_full_candidate.toml` from the
+[original UNB dataset source](https://www.unb.ca/cic/datasets/ids-2017.html) and
+place them under `data/raw/cicids2017/`. Raw data are not redistributed here.
+
+First regenerate the September group-split inputs. **This first step fits the
+September detector**; the two October steps reuse its saved predictions.
 
 ```sh
-python scripts/run_corrective_evaluation.py --output outputs/corrective_reproduction
+python scripts/run_corrective_evaluation.py --conditions duplicate_group_split --output outputs/corrective_evaluation/september_reproduction
+python scripts/replay_october_policy.py --frozen-run outputs/corrective_evaluation/september_reproduction --output outputs/october_replay
+python scripts/time_corrected_policy_20261013.py --frozen-run outputs/corrective_evaluation/september_reproduction --replay outputs/october_replay --output outputs/october_timing
 ```
 
-Output folders must not already exist. The run saves per-condition split
-assignments, training medians, development threshold curves, locked selection
-records, test predictions, validation records, aggregate metrics and hashes.
-These row-level outputs stay local and are ignored by Git. The same protocol
-can be run on Windows or another supported Python host; latency is host-specific.
-Fit and inference times are separate from serial enrichment-plus-Z3 timing.
+Use new output folders. Generated row-level records stay local under the ignored
+`outputs/` directory. The October replay covers the group-split original policy,
+web-brute correction, scan-branch retirement and combined correction, with the
+frozen score comparator. It does not regenerate the archived June, capture-day,
+broader web or missing-fact sensitivity records. Timing depends on the host and
+background load; exact elapsed times are not expected to match the saved run.
+See the [guide](docs/october_update_20261015.md#local-reproduction) for inputs,
+outputs and the timing boundary.
 
-## Historical path
+## Preserved September evaluation
 
-`scripts/run_experiment.py` preserves the original pipeline for traceability.
-That path used a random record split and pre-split imputation and is not the
-corrected evaluation. Its optional hosted enrichment is not required or used in
-this repository's reproduction commands. The new experiment does not replace
-the recorded historical primary result or merge in the five-alert hosted
-diagnostic.
+[Version 1.0.0](https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.0.0)
+and [September evidence](evidence/20260905/results.json) preserve the original
+corrective evaluation. It used the capped 400,000-row, eight-file sample and a
+100-tree Random Forest, with training-only imputation, exact-duplicate-group
+separation, development-only threshold selection and five capture-day holdouts.
+The [September protocol](docs/remediation_protocol_20260905.md) preceded those
+new calculations, but earlier dataset outcomes were already known. It was a
+retrospective correction, not an independent external confirmation.
 
-## Evidence and limits
+Under the September original rules, the group-split policy removed 117 FP and
+795 TP; its serial local mean was 3.552 ms. These are historical measurements,
+not the corrected policy's current results. The severe Wednesday and Thursday
+recall losses remain relevant transfer limitations. Capture-day challenges use
+different models and attack compositions; they are not independent replications
+or a forward-time deployment simulation.
 
-The completed September 5, 2026 corrective run evaluated 400,000 sampled rows
-under six prewritten conditions. The initial source/protocol commit preceded
-the run. [Aggregate evidence](evidence/20260905/results.json),
-[independent reconciliation](evidence/20260905/corrective_verification.json),
-and an [executed audit notebook](notebooks/review_corrective_evidence.ipynb)
-are included. The notebook uses only standard-library computations and public
-aggregates; its execution is not a second full model fit.
-
-The group-separated test set contained 120,059 records, including 23,603
-malicious records. All counts below use the same 0.15 reference queue.
-
-| Policy | False positives removed | True positives removed | Recall change (percentage points) |
-| --- | ---: | ---: | ---: |
-| Symbolic filter | 117 | 795 | -3.368 |
-| Development-selected score filter (0.21) | 110 | 11 | -0.047 |
-| Development-selected detector (0.16) | 17 | 1 | -0.004 |
-| Selected detector plus symbolic filter | 121 | 796 | -3.372 |
-
-Symbolic false-positive reduction was 31.200%, but its Wilson 95% interval
-was 26.721%-36.060%, crossing the historical 30% target. The score-only filter
-removed seven fewer false positives and 784 fewer true positives: this is not
-strict dominance on both counts, but it exposes the symbolic recall cost.
-Under equal FP/FN count costs the symbolic policy's net benefit is -678.
-Historical criteria are not operational safety tolerances.
-
-Day-held-out baseline/symbolic recalls were: Tuesday 39.072%/19.536%, Wednesday
-24.593%/6.983%, Thursday 84.296%/1.489%, and Friday 31.106%/30.956%. Monday has
-no malicious examples, so recall is undefined. These separately trained models
-face previously unseen attack labels; do not pool their outputs as independent
-replications or describe this as forward-time deployment testing.
-
-The group-split mean serial local enrichment-plus-Z3 latency was 3.552 ms.
-Five warmed 1,000-alert passes had means of 3.079-4.048 ms. The manifest records
-the Intel i7-9750H host, approximately 15.88 GiB RAM, software, source hashes,
-input hashes, and output hashes. This is new timing evidence, not a recovery
-of the unrecorded historical hardware environment.
-
-All six conditions independently reconciled counts, training-only medians,
-development-only selection, and zero raw/transformed exact-feature overlap
-between partitions. The complete raw artifacts remain local. The public
-manifest lists their hashes but a public aggregate check cannot independently
-recount unavailable row-level records; full reproduction regenerates them.
-
-To verify this published package without obtaining the dataset:
+To reproduce all six September conditions instead of only the group split:
 
 ```sh
-python scripts/verify_published_evidence.py
+python scripts/run_corrective_evaluation.py --output outputs/september_all_conditions
 ```
 
-The [version 1.0.0 source](https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.0.0)
-is the citation target. Source hashes identify the actual bytes because the
-experiment was executed from a dirty private worktree; the private commit ID
-alone does not identify the evaluated implementation.
+The [September reconciliation](evidence/20260905/corrective_verification.json)
+and [executed audit notebook](notebooks/review_corrective_evidence.ipynb) are
+unchanged. The notebook audits aggregates; it is not a second model fit.
+`scripts/run_experiment.py` also preserves the earlier random-record-split,
+pre-split-imputation pipeline. It is historical and separate from the corrected
+evaluation. Optional hosted enrichment is not used by these reproduction commands.
 
-Exact-feature separation does not guarantee independence of related traffic.
-Capture days contain different attacks; leave-day-out evaluation is not a
-forward-time deployment simulation. Original dataset-label defects remain a
-limitation. A passing aggregate recall margin does not establish safe alert
-suppression. The source and hypotheses may yield negative results.
+## Publication boundaries and citation
 
-## Publication boundaries
+Cite [version 1.1.0](https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.1.0)
+using [CITATION.cff](CITATION.cff); see the [changelog](CHANGELOG.md).
+Versioned source hashes identify the implementation bytes. GitHub tags provide
+version identifiers, not a permanent DOI archive.
 
-This is a clean source snapshot, not the private manuscript repository or its
-history. It contains no manuscript, advisor comments, credentials, raw dataset
-rows, trained-model pickle or hosted response payloads. No software license has
-been selected; public visibility should not be described as an open-source
-license grant. GitHub commits and tags provide version identifiers, not a
-permanent DOI archive.
+This clean public package contains no private manuscript, advisor correspondence,
+private Git history, raw dataset rows, trained-model pickle, credentials or hosted
+response payloads. No software license has been selected; public visibility is
+not an open-source license grant. The system is not a production intrusion
+prevention system, and these results do not establish operational safety.
 
 Code and analysis preparation used AI assistance under student review. The
 student remains responsible for understanding, checking and explaining the
