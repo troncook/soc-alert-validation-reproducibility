@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 — 2026-10-15
+
+- Update repository overview wording and citation metadata. Research code,
+  aggregate evidence and reported results are unchanged from 1.1.0.
+
 ## 1.1.0 — 2026-10-15
 
 - Add the October 2 retrospective policy correction on frozen predictions:

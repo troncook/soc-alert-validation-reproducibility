@@ -4,7 +4,7 @@ Research code for local post-detection symbolic validation of CICIDS2017 alerts.
 The system records supported, unsupported or inconclusive rule checks. These
 are model-relative dispositions: **unsupported does not mean benign**.
 
-## Current results — version 1.1.0
+## Current results — version 1.1.1
 
 This release adds the October 2 policy correction and the separate October 13
 local timing diagnostic. The correction reuses frozen September predictions;
@@ -127,7 +127,7 @@ evaluation. Optional hosted enrichment is not used by these reproduction command
 
 ## Publication boundaries and citation
 
-Cite [version 1.1.0](https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.1.0)
+Cite [version 1.1.1](https://github.com/troncook/soc-alert-validation-reproducibility/tree/v1.1.1)
 using [CITATION.cff](CITATION.cff); see the [changelog](CHANGELOG.md).
 Versioned source hashes identify the implementation bytes. GitHub tags provide
 version identifiers, not a permanent DOI archive.

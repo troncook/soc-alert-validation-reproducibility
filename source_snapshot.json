@@ -1,12 +1,12 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "files": {
     ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
     ".gitignore": "08fab511c22aa6b28a89dd879684d78600f9a24ea50b965b9cc8d9249ef430a5",
-    "CHANGELOG.md": "ea53470b2c2a6d7901dd9a99df09df03a2a6c10e0d36a77e019d237f5b693835",
-    "CITATION.cff": "331ac86ab68c3a821191c2a18f142eed597ee88409c06012199f8ef7fcb3de44",
+    "CHANGELOG.md": "dc447cc46555924ae32d71be7ab7006b09759515eb37c3307a4cc3fc88f2d2dc",
+    "CITATION.cff": "210c9b6e423ac338a3713632dd1982c4dd392d46027793e1b81c5901e18832b4",
     "OCTOBER_CODE_PROVENANCE.json": "2d8fb05cbc1c81261ce18f3e628a8c6e1dc67ffef4827611f1b4ca7427cfc793",
-    "README.md": "c5dd9312c08e21dba334c60b22b55f2c7ae6e78713422a05b252e0510cab2889",
+    "README.md": "324d86afb905d22bb7e1f63af9981115752ad389b74b2f07c1337ac73bf0398d",
     "config/cicids2017_full_candidate.toml": "c9a4e143dbbca2335156df788bf6aa455c98e3acce783a801a11473cc738ddc0",
     "docs/october_update_20261015.md": "5a496fad4f22fa63e912dcfc7773123030beca8539dce632c39941fbd5c6196a",
     "docs/remediation_protocol_20260905.md": "a329868d4d787315f1a26665e972c9cce3c3e38000c2500b29164e01af243113",
@@ -109,8 +109,8 @@
   "public_scope": "Research source, public protocols, aggregate evidence and focused verification. No manuscripts, private history, dataset rows, row-level outputs, credentials or hosted payloads.",
   "hash_scope": "Every tracked public file except this self-describing inventory. Git text conversion remains disabled.",
   "previous_version": {
-    "tag": "v1.0.0",
-    "commit": "0e8d411d6e4273d88e5cf54275c9bc5bd60bfc63"
+    "tag": "v1.1.0",
+    "commit": "8eae5279c6fa5f0bcec86e045d82e36dfd61e2aa"
   },
   "october_scope": "Retained October 2 validation-only replay and October 13 corrected local timing. Portable wrappers reproduce the four main duplicate-group policies and local timing from locally regenerated frozen inputs. Other archived sensitivity aggregates remain historical records."
 }
